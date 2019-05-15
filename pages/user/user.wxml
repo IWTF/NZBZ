@@ -1,0 +1,73 @@
+<view class='{{skin}}'>
+  <view class='bg'></view>
+  <!-- bg end -->
+
+  <view class='user_card'>
+    <view class='name'>仙人球</view>
+    <!-- name end -->
+
+    <view class='base_info'>
+      <view class='avatar'><image src='{{user_info.avatarUrl}}'></image></view>
+      <view>
+        <span class="boy" wx:if="{{user_info.sex == 'm'}}">♂</span>
+        <span class="girl" wx:else>♀</span>
+        <span class="age">{{user_info.age}}岁</span>
+      </view>
+      <view class='edit'><span>编辑</span></view>
+    </view>
+    <!-- avatar,sex... base_info end -->
+
+    <view class='get'>
+      <span><a>2</a> 分享</span>
+      <span><a>3</a> 笔记</span>
+      <span><a>1</a> 书友</span>
+    </view>
+    <!-- 分享, 笔记... end -->
+
+    <view class='character'>
+      {{user_info.address}}
+      <a wx:for="{{user_info.hobby}}" wx:key="{{index}}"
+        wx:if="{{index < (user_info.hobby.length - 1)}}">{{item}} / </a>
+      {{user_info.hobby[user_info.hobby.length - 1]}}
+    </view>
+    <view class='character'>简介： {{user_info.disc}}</view>
+  </view>
+  <!-- user_card end -->
+
+  <view class='nav_bar'>
+    <view bindtap='navToCollect'>
+      <view><image src="./images/save.png"></image></view>
+      <view>收藏</view>
+    </view>
+    <view>
+      <view><image src="./images/booklist.png"></image></view>
+      <view>书单</view>
+    </view>
+    <view>
+      <view><image src="./images/friends.png"></image></view>
+      <view>书友</view>
+    </view>
+    <view>
+      <view><image src="./images/notes.png"></image></view>
+      <view>笔记</view>
+    </view>
+  </view>
+  <!-- nav_bar end -->
+
+  <view class='settings'>
+    <view class='setting_header'>更多设置</view>
+    <view>
+      <view class='setting send'>
+        <span class="setting_icon"><image src='./images/mail.png'></image></span>
+        <span>快递查询</span>
+      </view>
+    </view>
+    <view>
+      <view class='setting'>
+        <span class="setting_icon"><image src='./images/theme.png'></image></span>
+        <span>夜间主题</span>
+        <switch bindchange="switchChange" class='switch'/>
+      </view>
+    </view>
+  </view>
+</view>

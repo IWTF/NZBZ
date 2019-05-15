@@ -1,0 +1,40 @@
+<view class='{{skin}}'>
+  <view class='like_pre_con'>
+      <scroll-view
+        scroll-x="true"
+        class='sorts'>
+        <view wx:for="{{sorts}}" wx:key="{{index}}" class='sort_item'
+          style='height: {{topBarH}}rpx;'>
+          <image src='{{item.imgUrl}}' class='sort_bg' style='height: {{topBarH}}rpx;'></image>
+          <view class='sort_name'>{{item.name}}</view>
+        </view>
+      </scroll-view>
+
+      <view>我的标签</view>
+      <scroll-view
+        class='like_con'
+        scroll-x="true">
+        <view wx:for="{{like_tags}}" wx:key="{{index}}" class='like_tag_con'>
+          <image src='./images/like_tag.png' class='like_tag_img'></image>
+          <span class='like_tag_name'>{{item.name}}</span>
+        </view>
+      </scroll-view>
+  </view>
+
+  <!-- 卡片展示 -->
+  <view class='page'>
+    <view class='card_con' wx:for="123456" wx:key="{{key}}" bindtap='navToDetail'>
+      <view class='img_con'>
+        <image src='../../images/exam.png'></image>
+      </view>
+      <view class='word_con'>
+        <view class='card_date'>6月3日 · 2018年</view>
+        <view class='card_title'>原创悬疑微电影《2030》</view>
+        <view class='tags_con'>
+          <span wx:for="{{tags}}" wx:key="{{key}}" class="tag-{{num}} tag">{{item}}</span>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+

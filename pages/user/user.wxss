@@ -1,0 +1,174 @@
+@import "../../skins/light.wxss";
+page{
+  width: 100%;
+  height: 100%;
+  color: #495060;
+  background-color: #f8f8f9;
+  font-size: 15px;
+}
+
+/************** 顶部背景 **************/
+.bg{
+  width: 100%;
+  height: 160rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #d1e7da;
+  z-index: -1;
+}
+
+/************** user_card *************/
+.user_card{
+  position: relative;
+  margin: 70rpx 30rpx 20rpx;
+  padding: 75rpx 25rpx 25rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  color: #81848b;
+  font-size: 13px;
+}
+
+/* name */
+.name{
+  position: absolute;
+  left: 162rpx;
+  top: -50rpx;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* base_info */
+.base_info{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  position: absolute;
+  left: 25rpx;
+  top: 0;
+  width: 90%;
+  transform: translateY(-50%);
+}
+
+.avatar, .avatar image{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+}
+
+.avatar{
+  border: 6rpx solid #8fc9ab;
+  margin-right: 20rpx;
+}
+
+.boy{
+  font-size: 16px;
+  font-weight: bold;
+  color: #5cadff;
+}
+
+.girl{
+  font-size: 16px;
+  color: ed3f14;
+  font-weight: bold;
+}
+
+.age{
+  margin-left: 15rpx;
+}
+
+.edit{
+  text-align: right;
+  flex-grow: 1;
+}
+
+.edit span{
+  background-color: #e1d4c1c7;
+  color: #519b7a;
+  padding: 8rpx 25rpx;
+  border-radius: 30rpx;
+}
+
+/* 收获，笔记... */
+.get span{
+  margin-right: 25rpx;
+}
+
+.get a{
+  color: #3b3f49;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* character */
+.character{
+  padding: 10rpx 0 0;
+}
+
+/**************** navBar style ***************/
+.nav_bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  margin: 20rpx 30rpx;
+  padding: 25rpx 30rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+}
+
+.nav_bar image{
+  width: 70rpx;
+  height: 70rpx;
+}
+
+/*************** settings style **************/
+.settings{
+  background-color: #fff;
+  margin: 20rpx 30rpx;
+  border-radius: 10rpx;
+  padding: 20rpx;
+}
+
+.setting_header{
+  font-size: 14px;
+  padding-bottom: 20rpx;
+}
+
+.setting{
+  position: relative;
+  padding: 15rpx 0 15rpx 20rpx;
+}
+
+.setting span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.setting_icon, .setting_icon image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 40rpx;
+}
+
+.send::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  right: 36rpx;
+  border-width: 2px 2px 0 0;
+  border-color: #cacbcc;
+  border-style: solid;
+  transform: translateY(-50%) matrix(.71, .71, -.71, .71, 0, 0);
+}
+
+.switch{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15rpx;
+}

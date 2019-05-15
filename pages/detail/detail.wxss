@@ -1,0 +1,285 @@
+@import "../../skins/light.wxss";
+page{
+  background-color: #f8f8f9;
+  color: #495060;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+
+/************** header style ****************/
+.header{
+  padding: 30rpx 40rpx 10rpx 40rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #dddee1;
+}
+
+.header_l, .header_r{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.header_l, .header_l image{
+  width: 165rpx;
+  height: 210rpx;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+}
+
+.header_r{
+  color: #8b8b8b;
+  /* max-width: 480rpx; */
+}
+
+.title{
+  font-size: 18px;
+  font-weight: bold;
+  color: #1c2438;
+}
+
+.tags_con view{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.tags{
+  max-width: 400rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tag{
+  padding: 5rpx 10rpx;
+  margin: 5rpx 10rpx;
+  color: #fff;
+  font-size: 12px;
+  background-color: #71b8ff;
+  border-radius: 8rpx;
+}
+
+/************** state_bar style ****************/
+.state_bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+
+.state_num{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.disc{
+  color: #bbbcbd;
+}
+
+/************** content style ****************/
+.content{
+  position: relative;
+  padding: 15rpx 30rpx;
+  margin: 20rpx 0;
+  background-color: #fff;
+}
+
+.tri_down{
+  position: absolute;
+  bottom: 22rpx;
+  right: 46rpx;
+  width: 0;
+  height: 0;
+  border: 12rpx solid #8b8b8b;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  transform: rotate(45deg);
+}
+
+.all{
+  padding-bottom: 20rpx;
+}
+
+.tri_up{
+  content: "";
+  position: absolute;
+  bottom: 10rpx;
+  right: 46rpx;
+  width: 0;
+  height: 0;
+  border: 12rpx solid #8b8b8b;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  transform: rotate(45deg);
+}
+
+/************** footer style ****************/
+.catalogue{
+  position: relative;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.catalogue span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.catalogue_text{
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 15rpx;
+}
+
+.chapter_num{
+  font-size: 13px;
+  color: #8b8b8b;
+}
+
+.catalogue::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  right: 36rpx;
+  border-width: 2px 2px 0 0;
+  border-color: #cacbcc;
+  border-style: solid;
+  transform: translateY(-50%) matrix(.71, .71, -.71, .71, 0, 0);
+}
+
+/************** footer style ****************/
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  width: 100%;
+}
+
+.save{
+  flex: 1;
+  text-align: center;
+  padding: 10rpx 0;
+}
+
+.save image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-bottom: -10rpx;
+}
+
+.contact{
+  position: relative;
+  font-size: 16px;
+  flex: 2;
+  color: #fff;
+  background-color: #3f434d;
+}
+
+.contact span{
+  position: absolute;
+  top: 50%;   
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+
+/************** talk style ****************/
+.talk{
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  padding-bottom: 160rpx;
+}
+
+.talk_h{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+
+.talk_hl{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.talk_hr {
+  position: relative;
+  flex-grow: 1;
+  text-align: right;
+  color: #cacbcc;
+}
+
+.talk_hr {
+  padding-right: 13px;
+}
+
+.talk_hr::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  right: 2px;
+  border-width: 2px 2px 0 0;
+  border-color: #cacbcc;
+  border-style: solid;
+  transform: translateY(-50%) matrix(.71, .71, -.71, .71, 0, 0);
+}
+
+.talk_cell{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.avatar, .avatar image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: rgba(71, 78, 88, 0.0195) 1px 1px, rgba(75, 82, 92, 0.019) 2px 2px, rgba(80, 86, 96, 0.0185) 3px 3px, rgba(84, 90, 100, 0.018) 4px 4px, rgba(88, 94, 103, 0.0175) 5px 5px, rgba(92, 98, 107, 0.017) 6px 6px, rgba(96, 102, 111, 0.0165) 7px 7px;
+}
+
+.talk_cell_r{
+  flex-grow: 1;
+}
+
+.tcell_header{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5rpx;
+  border-bottom: 3rpx solid #dddee1;
+}
+
+.talker_name{
+  position: relative;
+  color: #61b0ff;
+}
+
+.talker_name::after{
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: -6rpx;
+  border: 3rpx solid #61b0ff;
+}
+
+.talk_time{
+  text-align: right;
+  flex-grow: 1;
+  color: #cacbcc;
+}
+
+.discuss{
+  padding: 5rpx 0 20rpx 0;
+}

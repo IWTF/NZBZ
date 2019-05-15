@@ -1,0 +1,139 @@
+@import "../../skins/light.wxss";
+page{
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  color: #646a77;
+}
+
+.header{
+  padding: 20rpx 30rpx;
+  color: #fff;
+  background-color: #d1e7da;
+}
+
+.circle{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10rpx 0 20rpx 0;
+}
+
+.one_word span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.one_word image{
+  width: 40rpx;
+  height: 37rpx;
+  margin-right: 24rpx;
+}
+
+.one_word image:hover{
+  /* 想加一个左右晃动小彩蛋 */
+  background-color: #000;
+}
+
+/*************** pub style *************/
+.pub{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 22rpx 0 20rpx 0;
+  border: 2rpx solid #e2e2e2;
+  background-color: #fff;
+  z-index: 1;
+  position: sticky;
+  top: -2rpx;
+}
+
+.item span{
+  display: inline-block;
+  vertical-align: top;
+}
+
+.item image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+}
+
+/************ note style *************/
+.note{
+  padding: 30rpx 30rpx 10rpx;
+  background-color: #fff;
+}
+
+.note_puber span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.note_puber image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.topic{
+  padding: 10rpx 0;
+  font-weight: bold;
+  color: #000;
+}
+
+.content_con, .note_bot{
+  padding: 0 10rpx;
+}
+
+.img_con{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 15rpx 0 0;
+}
+
+.temp{
+  width: 216rpx;
+  margin: 4rpx;
+}
+
+.img_con image{
+  width: 100%;
+  height: 214rpx;
+}
+
+.single_img{
+  text-align: center;
+}
+
+.single_img image{
+  width: 70%;
+  height: 750rpx;
+}
+
+/************** note_bot style ***********/
+.note_bot{
+  display: flex;
+  flex-direction: row;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.bot_item span{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.bot_item image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 15rpx;
+}
+
+.bot_item:last-child image{
+  width: 50rpx;
+  height: 60rpx;
+  nav-right: -6rpx;
+}

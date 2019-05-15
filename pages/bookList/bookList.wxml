@@ -1,0 +1,8 @@
+<view class="{{skin}}">
+  <view class='bookList_bar'>
+    <span><image src='./images/bookList.png'></image></span>
+    <span>我的书架</span>
+  </view>
+
+  
+</view>

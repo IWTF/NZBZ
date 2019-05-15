@@ -1,0 +1,61 @@
+@import "../../skins/light.wxss";
+page{
+  width: 100%;
+  height: 100%;
+  color: #519b7a;
+  font-size: 14px;
+  background-color: #f2f2f2;
+}
+
+.booklist{
+  margin: 20rpx;
+  border-radius: 15rpx;
+  background-color: #fff;
+  box-shadow: 2rpx 2rpx 10rpx #62ad8c;
+}
+
+.pub_con{
+  position: relative;
+  background-color: #fafafa;
+}
+
+.pub_con::after{
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 50%;
+  right: 30rpx;
+  transform: translateY(-50%) rotate(45deg);
+  border: 4rpx solid #62ad8c;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.avatar{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin: 15rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.book_con{
+  margin: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.book_cover{
+  width: 150rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+}
+
+.book_name{
+  color: #495060;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}

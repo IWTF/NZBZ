@@ -1,0 +1,181 @@
+@import "../../skins/light.wxss";
+/******************************************/
+page{
+  width: 100%;
+  height: 100%;
+  color: #519b7a;
+  font-size: 14px;
+  background-color: #f2f2f2;
+}
+
+.page{
+  margin-top: 274rpx;
+  padding-top: 25rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0 10rpx;
+  justify-content: space-around;
+}
+
+/**********  sort style ****************/
+.sorts{
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.sort_item{
+  position: relative;
+  width: 210rpx;
+  height: 135rpx;
+  display: inline-block;
+  margin: 20rpx 10rpx 10rpx;
+  border-radius: 15rpx;
+}
+
+.sort_bg{
+  width: 210rpx;
+  height: 135rpx;
+  border-radius: 15rpx;
+  z-index: 1;
+}
+
+.sort_name{
+  position: absolute;
+  bottom: 20rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 0 10rpx 5rpx;
+  border-bottom: 2rpx solid #fff;
+  z-index: 3;
+}
+
+.sort_item::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 15rpx;
+  background-color: rgba(0, 0, 0, .3)
+}
+
+::-webkit-scrollbar{
+  height: 0;
+  width: 0;
+  color: transparent;
+}
+
+/************** like tag style ******************/
+.like_pre_con{
+  position: fixed;
+  left: 0;
+  /* top: 140rpx; */
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: left;
+  padding: 0rpx 20rpx 5rpx;
+}
+
+.like_con{
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.like_tag_con{
+  width: 120rpx;
+  display: inline-block;
+  margin: 20rpx 10rpx 10rpx;
+  padding: 5rpx 20rpx;
+  background-color: #ffb15eb4;
+  border-radius: 40rpx;
+}
+
+.like_tag_img{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+}
+
+.card_con{
+  width: 45%;
+  border-radius: 10rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  box-shadow: rgba(71, 78, 88, 0.0195) 1px 1px, rgba(75, 82, 92, 0.019) 2px 2px, rgba(80, 86, 96, 0.0185) 3px 3px, rgba(84, 90, 100, 0.018) 4px 4px, rgba(88, 94, 103, 0.0175) 5px 5px, rgba(92, 98, 107, 0.017) 6px 6px, rgba(96, 102, 111, 0.0165) 7px 7px, rgba(101, 107, 115, 0.016) 8px 8px, rgba(105, 111, 119, 0.0155) 9px 9px, rgba(109, 115, 123, 0.015) 10px 10px, rgba(113, 119, 127, 0.0145) 11px 11px, rgba(117, 123, 131, 0.014) 12px 12px;
+}
+
+.img_con,.img_con image{
+  width: 100%;
+  height: 290rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+
+.word_con{
+  padding: 20rpx;
+}
+
+.card_date{
+  color: #9ba6b6;
+}
+
+.card_title{
+  width: 95%;
+  color: #495060;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 6rpx 0 10rpx 0;
+}
+
+.tags_con{
+  width: 95%;
+  /* position: relative; */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* .tags_con::after{
+  content: '';
+  width: 30rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: linear-gradient(to right, transparent 60%, #fff);
+} */
+
+.tag:first-child{
+  margin: 0;
+}
+
+.tag{
+  margin: 0 10rpx;
+  padding: 5rpx 15rpx;
+  border-radius: 40rpx;
+  color: #ffb25e;
+  background-color: #ffedd9;
+}
+
+.tag-0{
+  color: #ffb25e;
+  background-color: #ffedd9;
+}
+
+.tag-1{
+  color: #837adc;
+  background-color: #def1ff;
+}
+
+.tag-2{
+  color: #ffb25e;
+  background-color: #ffedd9;
+}

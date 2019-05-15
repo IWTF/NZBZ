@@ -1,0 +1,19 @@
+<view class='{{skin}}'>
+  <!-- 列表展示 -->
+  <view class='booklist'>
+    <view class='pub_con'>
+      <image class='avatar' src='https://placem.at/people?w=20&h=20'></image>
+      <span class="pub_name">仙人球</span>
+    </view>
+    <view class='book_con'>
+      <view>
+        <image  class='book_cover'
+          src='https://placem.at/people?w=40&h=40'></image>
+      </view>
+      <view>
+        <view class='book_name'>爱的教育</view>
+        <view class='book_info'>简介：发范德萨发大师傅发射点发打算发大师傅大撒发射点浮点数</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,93 @@
+<wxs src="../../wxs/substring.wxs" module="tools" />
+
+<view class='{{skin}}'>
+  <view class='header'>
+    <span class="header_l">
+      <image src='./images/exam.png'></image>
+    </span>
+    <span class="header_r">
+      <!-- title -->
+      <view class='title'>都挺好</view>
+
+      <!-- book author -->
+      <view>Author</view>
+
+      <!-- tag -->
+      <view class='tags_con'>
+        <view>标签：</view>
+        <view>
+          <span class="tags">
+            <span wx:for="{{tags}}" wx:key="{{key}}" class="tag">{{item}}</span>
+          </span>
+        </view>
+      </view>
+    </span>
+  </view>
+  <!-- header end -->
+
+  <view class='state_bar'>
+    <view>
+      <view class='state_num'>10 ers</view>
+      <view class='disc'>想要</view>
+    </view>
+    <view>
+      <view class='state_num'>2 ers</view>
+      <view class='disc'>书友</view>
+    </view>
+    <view>
+      <view class='state_num'>23 ers</view>
+      <view class='disc'>推荐</view>
+    </view>
+  </view>
+  <!-- state_bar end -->
+
+  <view class='content'>
+    <view wx:if="{{disc.length > 94 && !show}}"
+      class="seg">{{tools.sub(disc)}}</view>
+    <view wx:else class="all">{{disc}}</view>
+
+    <view wx:if="{{disc.length > 94 && !show}}"
+      class='tri_down' catchtap="showDisc"></view>
+    <view wx:if="{{disc.length > 94 && show}}"
+      class='tri_up' catchtap="hideDisc"></view>
+  </view>
+  <!-- content end -->
+
+  <view class='catalogue'>
+    <span class="catalogue_text">查看目录</span>
+    <span class="chapter_num">共431章</span>
+  </view>
+  <!-- catalogue end -->
+
+  <view class='talk'>
+    <view class='talk_h'>
+      <view class="talk_hl">评论</view>
+      <view class='talk_hr'>友圈</view>
+    </view>
+    <view wx:for="{{talks}}" class='talk_cell' wx:key="{{index}}">
+      <view class='avatar'><image src='{{item.avatarUrl}}'></image></view>
+      <view class='talk_cell_r'>
+        <view class='tcell_header'>
+          <view class='talker_name'>{{item.name}}</view>
+          <view class='talk_time'>{{item.time}}</view>
+        </view>
+        <view class='discuss'>{{item.discuss}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- talk end -->
+
+  <view class='footer'>
+    <view class='save'>
+      <view><image src='./images/love.png'></image></view>
+      <view>收藏</view>
+    </view>
+    <view class='save'>
+      <view><image src='./images/share.png'></image></view>
+      <view>分享</view>
+    </view>
+    <view class='contact'>
+      <span>联系TA</span>
+    </view>
+  </view>
+</view>
