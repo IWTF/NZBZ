@@ -1,5 +1,6 @@
 //logs.js
 const util = require('../../utils/util.js')
+var changeSkin = require('../../skins/changeSkin.js')
 var app = getApp()
 
 Page({
@@ -46,36 +47,21 @@ Page({
   // 更换主题
   switchChange(e) {
     // console.log('switch2 发生 change 事件，携带值为', e.detail.value)
-    var chosenSkin
-    var frontColor
-    var backgroundColor
+    var skin
     if (e.detail.value) {
-      chosenSkin = 'dark-box'
-      frontColor = '#ffffff'
-      backgroundColor = '#14161a'
+      skin = 'dark-box'
     } else {
-      chosenSkin = ''
-      frontColor = '#000000'
-      backgroundColor = '#d1e7da'
+      skin = ''
     }
 
     // 设置该页面皮肤
     this.setData({
-      skin: chosenSkin
+      skin: skin
     })
 
     // 设置皮肤全局变量
-    app.globalData.skin = chosenSkin
+    app.globalData.skin = skin
 
-    // 更改navigationBar的颜色
-    // 此处有些麻烦，需要根据skin设置其深色背景
-    wx.setNavigationBarColor({
-      frontColor: frontColor,
-      backgroundColor: backgroundColor,
-      animation: {
-        duration: 400,
-        timingFunc: 'easeIn'
-      }
-    })
+    changeSkin.changeSkin(skin)
   }
 })

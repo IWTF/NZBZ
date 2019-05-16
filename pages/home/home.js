@@ -1,5 +1,5 @@
 const app = getApp()
-
+var changeSkin = require('../../skins/changeSkin.js')
 
 Page({
   data: {
@@ -47,22 +47,8 @@ Page({
       skin: app.globalData.skin
     })
 
-    switch (skin) {
-      case 'dark-box':
-        wx.setNavigationBarColor({frontColor: '#ffffff', backgroundColor: '#14161a',
-          animation: {duration: 400, timingFunc: 'easeIn'}
-        })
-        break;
-      case '':
-        wx.setNavigationBarColor({
-          frontColor: '#000000', backgroundColor: '#d1e7da',
-          animation: { duration: 400, timingFunc: 'easeIn' }
-        })
-        break;
-      default:
-        break;
-    }
-    
+    changeSkin.changeSkin(skin)
+
   },
 
   navToDetail () {

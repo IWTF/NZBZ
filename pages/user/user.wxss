@@ -83,7 +83,8 @@ page{
   flex-grow: 1;
 }
 
-.edit span{
+.edit view{
+  display: inline-block;
   background-color: #e1d4c1c7;
   color: #519b7a;
   padding: 8rpx 25rpx;

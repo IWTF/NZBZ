@@ -199,7 +199,7 @@
 
 /******************************* home.wxss ***************************/
 .dark-box .page{
-  background-color: transparent !important;
+  /* background-color: transparent !important; */
 }
 
 .dark-box .card_con{

@@ -1,4 +1,4 @@
-<view class='{{skin}}'>
+<view class='{{skin}} home'>
   <view class='like_pre_con'>
       <scroll-view
         scroll-x="true"
@@ -36,5 +36,6 @@
       </view>
     </view>
   </view>
+
 </view>
 

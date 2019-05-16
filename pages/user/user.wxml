@@ -13,7 +13,7 @@
         <span class="girl" wx:else>♀</span>
         <span class="age">{{user_info.age}}岁</span>
       </view>
-      <view class='edit'><span>编辑</span></view>
+      <view class='edit'><view>编辑</view></view>
     </view>
     <!-- avatar,sex... base_info end -->
 

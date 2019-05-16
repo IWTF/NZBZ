@@ -95,7 +95,7 @@ page{
 }
 
 .temp{
-  width: 216rpx;
+  width: 214rpx;
   margin: 4rpx;
 }
 

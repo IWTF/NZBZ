@@ -35,6 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    skin: 'dark-box'
+    skin: ''
   }
 })
