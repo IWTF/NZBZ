@@ -24,3 +24,103 @@ page{
   height: 140rpx;
   margin-right: 30rpx;
 }
+
+/**********  arrow style *************/
+.arrow{
+  padding: 20rpx 30rpx 10rpx;
+}
+
+.arrow view{
+  display: inline-block;
+  width: 50%;
+}
+
+.l_arrow{
+  text-align: left;
+}
+
+.r_arrow{
+  text-align: right;
+}
+
+.arrow image{
+  height: 50rpx;
+  width: 60rpx;
+}
+
+
+/*************  bookList style *************/
+.swiper{
+  width: 100%;
+  height: 900rpx;
+}
+
+.book_top, .circle{
+  border-top-left-radius: 15rpx;
+  border-top-right-radius: 15rpx;
+  padding: 40rpx 0 25rpx;
+  text-align: center;
+  background-color: #62adbc;
+}
+
+.bookImg{
+  width: 120rpx;
+  height: 120rpx;
+  margin: auto;
+  border-radius: 50%;
+  border: 4rpx solid #b5dac5;
+  margin-bottom: 20rpx;
+}
+
+.bookName{
+  font-weight: bold;
+  color: #fff;
+}
+
+.bookImg image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.bookDisc{
+  height: 360rpx;
+  text-align: center;
+  padding: 50rpx 25rpx 20rpx;
+  background-color: #fff;
+  border-bottom-left-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+}
+
+.fb_con{
+  position: relative;
+  perspective:500;
+}
+
+.fb_con > view{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 520rpx;
+  height: 100%;
+  padding: 80rpx 120rpx;
+  border-radius: 15rpx;
+  background-color: #f8f8f9;
+  perspective:10000;
+  backface-visibility:hidden;
+  transition: all 2s;
+}
+
+.circle{
+  height: 400rpx;
+}
+
+.center{
+  position: relative;
+  display: inline-block;
+  width: 10rpx;
+  height: 10rpx;
+  margin: auto;
+  margin-top: 38%;
+  background-color: #fff;
+}

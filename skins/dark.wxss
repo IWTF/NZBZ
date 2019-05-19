@@ -15,7 +15,7 @@
   background-color: #14161a !important;
 }
 
-.dark-box .header{
+.dark-box.bookGroup .header{
   color: #8e95a1 !important;
   background-color: #14161a !important;
 }
@@ -26,17 +26,17 @@
 }
 
 /******* pub style ********/
-.dark-box .pub{
+.dark-box.bookGroup .pub{
   border: 2rpx solid #66707f !important;
   background-color: #33373b !important;
 }
 
 /******** note style ********/
-.dark-box .note{
+.dark-box.bookGroup .note{
   background-color: #33373b !important;
 }
 
-.dark-box .topic{
+.dark-box.bookGroup .topic{
   color: #8e95a1 !important;
 }
 
@@ -44,58 +44,58 @@
 
 /******* header style *******/
 
-.dark-box .header_r{
+.dark-box.detail .header_r{
   color: #66707f !important;
   /* max-width: 480rpx; */
 }
 
-.dark-box .title{
+.dark-box.detail .title{
   color: #8e95a1 !important;
 }
 
-.dark-box .tag{
+.dark-box.detail .tag{
   color: #a6abb4 !important;
   background-color: #65a3e0 !important;
 }
 
 /******* state_bar style ********/
-/* .dark-box .state_bar{
+/* .dark-box .detail .state_bar{
   background-color: #33373b !important;
 } */
 
-.dark-box .state_num{
+.dark-box.detail .state_num{
   color: #8e95a1;
 }
 
-.dark-box .disc{
+.dark-box.detail .disc{
   color: #66707f !important;
 }
 
 /******** content style ********/
-.dark-box .tri_down{
+.dark-box.detail .tri_down{
   border: 12rpx solid #8e95a1 !important;
   border-left-color: transparent !important;
   border-top-color: transparent !important;
 }
 
-.dark-box .tri_up{
+.dark-box.detail .tri_up{
   border: 12rpx solid #8e95a1 !important;
   border-bottom-color: transparent !important;
   border-right-color: transparent !important;
 }
 
 /******* footer style ********/
-.dark-box .chapter_num{
+.dark-box.detail .chapter_num{
   font-size: 13px;
   color: #66707f !important;
 }
 
 /******* catalogue style ********/
-.dark-box .catalogue_text{
+.dark-box.detail .catalogue_text{
   color: #8e95a1;
 }
 
-.dark-box .catalogue::after {
+.dark-box.detail .catalogue::after {
   border-color: #8e95a1 !important;
 }
 
@@ -104,18 +104,18 @@
   background-color: #33373b !important;
 } */
 
-.dark-box .contact{
+.dark-box.detail .contact{
   color: #66707f !important;
   background-color: #b0b5bd !important;
 }
 
 
 /******** talk style *******/
-.dark-box .talk{
+.dark-box.detail .talk{
   background-color: #33373b !important;
 }
 
-.dark-box .talk_hl{
+.dark-box.detail .talk_hl{
   color: #8e95a1 !important;
 }
 
@@ -123,26 +123,26 @@
   color: #8e95a1 !important;
 }
 
-.dark-box .talk_hr::after {
+.dark-box.detail .talk_hr::after {
   border-color: #8e95a1 !important;
 }
 
-.dark-box .tcell_header{
+.dark-box.detail .tcell_header{
   display: flex;
   flex-direction: row;
   padding-bottom: 5rpx;
   border-bottom: 3rpx solid #66707f !important;
 }
 
-.dark-box .talker_name{
+.dark-box.detail .talker_name{
   color: #579de2 !important;
 }
 
-.dark-box .talker_name::after{
+.dark-box.detail .talker_name::after{
   border: 3rpx solid #579de2 !important;
 }
 
-.dark-box .talk_time{
+.dark-box.detail .talk_time{
   text-align: right;
   flex-grow: 1;
   color: #8e95a1 !important;
@@ -162,78 +162,74 @@
 }
 
 /* name */
-.dark-box .name{
+.dark-box.user .name{
   color: #8e95a1 !important;
 }
 
 /* base_info */
-.dark-box .avatar{
+.dark-box.user .avatar{
   border: 6rpx solid #66707f !important;
 }
 
-.dark-box .boy{
+.dark-box.user .boy{
   color: #5298df !important;
 }
 
-.dark-box .girl{
+.dark-box.user .girl{
   color: #d13913 !important;
 }
 
 
-.dark-box .edit span{
+.dark-box.user .edit span{
   background-color: #23262c !important;
   color: #8e95a1 !important;
 }
 
 /* 收获，笔记... */
 
-.dark-box .get a{
+.dark-box.user .get a{
   color: #9ba2ad !important;
 }
 
 
 /********* settings style ********/
-.dark-box .setting::after {
+.dark-box.user .setting::after {
   border-color: #8e95a1 !important;
 }
 
 /******************************* home.wxss ***************************/
-.dark-box .page{
-  /* background-color: transparent !important; */
-}
-
-.dark-box .card_con{
+.dark-box.home .card_con{
   background-color: #33373b;
 }
 
-.dark-box .card_date{ 
+.dark-box.home .card_date{ 
   color: #66707f !important;
 }
 
-.dark-box .card_title{
+.dark-box.home .card_title{
   color: #8e95a1 !important;
 }
 
-.dark-box .tags_con::after{
+.dark-box.home .tags_con::after{
   background-image: linear-gradient(to right, transparent 60%, #33373b) !important;
 }
 
-.dark-box .tag{
+.dark-box.home .tag{
   color: #e09c54 !important;
   background-color: #ebdbc9 !important;
 }
 
-.dark-box .tag-0{
+.dark-box.home .tag-0{
   color: #e09c54 !important;
   background-color: #ebdbc9 !important;
 }
 
-.dark-box .tag-1{
+.dark-box.home .tag-1{
   color: #7970c7 !important;
   background-color: #cbdbe7 !important;
 }
 
-.dark-box .tag-2{
+.dark-box.home .tag-2{
   color: #e09c54 !important;
   background-color: #ebdbc9 !important;
 }

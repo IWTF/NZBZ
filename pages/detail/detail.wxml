@@ -1,6 +1,6 @@
 <wxs src="../../wxs/substring.wxs" module="tools" />
 
-<view class='{{skin}}'>
+<view class='{{skin}} detail'>
   <view class='header'>
     <span class="header_l">
       <image src='./images/exam.png'></image>

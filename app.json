@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/collect/collect",
     "pages/bookList/bookList",
+    "pages/collect/collect",
     "pages/user/user",
     "pages/bookGroup/bookGroup",
     "pages/detail/detail"
@@ -14,8 +14,8 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "color": "#ffba00",
-    "selectedColor": "#a87dff",
+    "color": "#d1e7da",
+    "selectedColor": "#519b7a",
     "backgroundColor": "#fff",
     "list": [
       {

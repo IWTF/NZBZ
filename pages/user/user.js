@@ -44,6 +44,12 @@ Page({
     })
   },
 
+  navToBookList () {
+    wx.navigateTo({
+      url: '../bookList/bookList',
+    })
+  },
+
   // 更换主题
   switchChange(e) {
     // console.log('switch2 发生 change 事件，携带值为', e.detail.value)

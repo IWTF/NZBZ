@@ -1,4 +1,4 @@
-<view class='{{skin}}'>
+<view class='{{skin}} bookGroup'>
   <view class='header'>
     <view class='circle'>书圈</view>
   <view class='one_word'>

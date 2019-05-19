@@ -1,4 +1,4 @@
-<view class='{{skin}}'>
+<view class='{{skin}} user'>
   <view class='bg'></view>
   <!-- bg end -->
 
@@ -39,7 +39,7 @@
       <view><image src="./images/save.png"></image></view>
       <view>收藏</view>
     </view>
-    <view>
+    <view bindtap='navToBookList'>
       <view><image src="./images/booklist.png"></image></view>
       <view>书单</view>
     </view>

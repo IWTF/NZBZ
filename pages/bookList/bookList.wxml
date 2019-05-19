@@ -1,8 +1,36 @@
-<view class="{{skin}}">
+<view class="{{skin}} bookList">
   <view class='bookList_bar'>
     <span><image src='./images/bookList.png'></image></span>
     <span>我的书架</span>
   </view>
 
-  
+  <view class='arrow'>
+    <view class='l_arrow'><image src='./images/arrow-left.png' catchtap='switchL'></image></view>
+    <view class='r_arrow'><image src='./images/arrow-right.png' catchtap='switchR'></image></view>
+  </view>
+
+  <swiper
+    current='{{currentItemId}}'
+    class='swiper'>
+    <block wx:for="{{books}}" wx:key="{{index}}">
+      <swiper-item class="fb_con" catchtap='changePage' data-index='{{index}}'>
+        <view class='front'
+          style="{{front ? '':'transform:rotateY(-180deg);'}}">
+          <view class='book_top'>
+            <view class='bookImg'><image src='{{item.imgUrl}}'></image></view>
+            <view class='bookName'>{{item.bookName}}</view>
+          </view>
+          <view class='bookDisc'>
+            {{item.disc}}
+          </view>
+        </view>
+        <view class='back'
+          style="{{front ? 'transform:rotateY(-180deg);':'transform:rotateY(-360deg);'}}">
+          <view class="circle">
+            <view class='center'>**</view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>
