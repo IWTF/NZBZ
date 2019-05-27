@@ -32,6 +32,13 @@ App({
         }
       }
     })
+    // 自动切换主题
+    // var date = new Date()
+    // if(date.getHours()>=21 || date.getHours()<=6){
+    //   this.globalData.skin = 'dark-box'
+    //   console.log(date.getHours())
+    // }
+    
   },
   globalData: {
     userInfo: null,

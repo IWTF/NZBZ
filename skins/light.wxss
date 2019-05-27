@@ -8,35 +8,38 @@
 */
 
 /****************** bookGroup.wxss ******************/
-.dark-box{
+
+.dark-box {
   width: 100%;
   height: 100%;
   color: #66707f !important;
   background-color: #14161a !important;
 }
 
-.dark-box .header{
+.dark-box .header {
   color: #8e95a1 !important;
   background-color: #14161a !important;
 }
 
-.dark-box .one_word image:hover{
+.dark-box .one_word image:hover {
   /* 想加一个左右晃动小彩蛋 */
   background-color: #fff !important;
 }
 
 /******* pub style ********/
-.dark-box .pub{
+
+.dark-box .pub {
   border: 2rpx solid #66707f !important;
   background-color: #33373b !important;
 }
 
 /******** note style ********/
-.dark-box .note{
+
+.dark-box .note {
   background-color: #33373b !important;
 }
 
-.dark-box .topic{
+.dark-box .topic {
   color: #8e95a1 !important;
 }
 
@@ -44,54 +47,58 @@
 
 /******* header style *******/
 
-.dark-box .header_r{
+.dark-box .header_r {
   color: #66707f !important;
   /* max-width: 480rpx; */
 }
 
-.dark-box .title{
+.dark-box .title {
   color: #8e95a1 !important;
 }
 
-.dark-box .tag{
+/* .dark-box .tag{
   color: #a6abb4 !important;
   background-color: #65a3e0 !important;
-}
+} */
 
 /******* state_bar style ********/
+
 /* .dark-box .state_bar{
   background-color: #33373b !important;
 } */
 
-.dark-box .state_num{
+.dark-box .state_num {
   color: #8e95a1;
 }
 
-.dark-box .disc{
+.dark-box .disc {
   color: #66707f !important;
 }
 
 /******** content style ********/
-.dark-box .tri_down{
+
+.dark-box .tri_down {
   border: 12rpx solid #8e95a1 !important;
   border-left-color: transparent !important;
   border-top-color: transparent !important;
 }
 
-.dark-box .tri_up{
+.dark-box .tri_up {
   border: 12rpx solid #8e95a1 !important;
   border-bottom-color: transparent !important;
   border-right-color: transparent !important;
 }
 
 /******* footer style ********/
-.dark-box .chapter_num{
+
+.dark-box .chapter_num {
   font-size: 13px;
   color: #66707f !important;
 }
 
 /******* catalogue style ********/
-.dark-box .catalogue_text{
+
+.dark-box .catalogue_text {
   color: #8e95a1;
 }
 
@@ -100,22 +107,23 @@
 }
 
 /******* footer style ********/
+
 /* .dark-box .footer{
   background-color: #33373b !important;
 } */
 
-.dark-box .contact{
+.dark-box .contact {
   color: #66707f !important;
   background-color: #b0b5bd !important;
 }
 
-
 /******** talk style *******/
-.dark-box .talk{
+
+.dark-box .talk {
   background-color: #33373b !important;
 }
 
-.dark-box .talk_hl{
+.dark-box .talk_hl {
   color: #8e95a1 !important;
 }
 
@@ -127,22 +135,22 @@
   border-color: #8e95a1 !important;
 }
 
-.dark-box .tcell_header{
+.dark-box .tcell_header {
   display: flex;
   flex-direction: row;
   padding-bottom: 5rpx;
   border-bottom: 3rpx solid #66707f !important;
 }
 
-.dark-box .talker_name{
+.dark-box .talker_name {
   color: #579de2 !important;
 }
 
-.dark-box .talker_name::after{
+.dark-box .talker_name::after {
   border: 3rpx solid #579de2 !important;
 }
 
-.dark-box .talk_time{
+.dark-box .talk_time {
   text-align: right;
   flex-grow: 1;
   color: #8e95a1 !important;
@@ -151,74 +159,78 @@
 /********************** user.wxss ****************/
 
 /******** 顶部背景 ********/
-.dark-box .bg{
+
+.dark-box .bg {
   background-color: #14161a !important;
 }
 
 /********* user_card ********/
-.dark-box > view{
+
+.dark-box view:not(.header):not(.circle):not(.one_word):not(.sort_name) {
   background-color: #33373b !important;
   color: #81848b !important;
 }
 
 /* name */
-.dark-box .name{
+
+.dark-box .name {
   color: #8e95a1 !important;
 }
 
 /* base_info */
-.dark-box .avatar{
+
+.dark-box .avatar {
   border: 6rpx solid #66707f !important;
 }
 
-.dark-box .boy{
+.dark-box .boy {
   color: #5298df !important;
 }
 
-.dark-box .girl{
+.dark-box .girl {
   color: #d13913 !important;
 }
 
-
-.dark-box .edit span{
+.dark-box .edit span {
   background-color: #23262c !important;
   color: #8e95a1 !important;
 }
 
 /* 收获，笔记... */
 
-.dark-box .get a{
+.dark-box .get a {
   color: #9ba2ad !important;
 }
 
-
 /********* settings style ********/
+
 .dark-box .setting::after {
   border-color: #8e95a1 !important;
 }
 
 /******************************* home.wxss ***************************/
-.dark-box .page{
+
+.dark-box .page {
   background-color: transparent !important;
 }
 
-.dark-box .card_con{
+.dark-box .card_con {
   background-color: #33373b;
 }
 
-.dark-box .card_date{ 
+.dark-box .card_date {
   color: #66707f !important;
 }
 
-.dark-box .card_title{
+.dark-box .card_title {
   color: #8e95a1 !important;
 }
 
-.dark-box .tags_con::after{
+.dark-box .tags_con::after {
   background-image: linear-gradient(to right, transparent 60%, #33373b) !important;
 }
 
-.dark-box .tag{
+/* .dark-box .tag{
   color: #e09c54 !important;
   background-color: #ebdbc9 !important;
 }
@@ -236,4 +248,8 @@
 .dark-box .tag-2{
   color: #e09c54 !important;
   background-color: #ebdbc9 !important;
+} */
+
+.dark-box .notes {
+  background-color: #14161a !important;
 }

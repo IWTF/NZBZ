@@ -1,62 +1,118 @@
 <view class='{{skin}} bookGroup'>
   <view class='header'>
     <view class='circle'>书圈</view>
-  <view class='one_word'>
-    <span><image src='./images/notice.png'></image></span>  
-    <span>读好书，爱分享，来讨论</span>
-  </view>
+    <view class='one_word'>
+      <span>
+        <image src='./images/notice.png'></image>
+      </span>
+      <span>读好书，爱分享，来讨论</span>
+    </view>
   </view>
   <!-- header end -->
 
   <view class='pub'>
     <view class='item'>
-      <span><image src="./images/publish.png"></image></span>
-      <span>发表</span>
+      <span>
+        <image src="./images/publish.png"></image>
+      </span>
+      <span>排序</span>
     </view>
-    <view class='item'>
-      <span><image src="./images/mark.png"></image></span>
+    <view class='item' catchtap='navTohoster'>
+      <span>
+        <image src="./images/mark.png"></image>
+      </span>
       <span>书签</span>
     </view>
     <view class='item'>
-      <span><image src="./images/search.png"></image></span>
+      <span>
+        <image src="./images/search.png"></image>
+      </span>
       <span>搜索</span>
     </view>
   </view>
   <!-- pub（发布） end -->
 
-  <view wx:for="{{notes}}" wx:key="{{index}}" class='note'>
-    <view class='note_puber'>
-      <span><image src='{{item.avatarUrl}}'></image></span>
-      <span>
-        <view>{{item.publisher}} · {{item.time}}</view>
-        <view class='topic'>{{item.topic}}</view>
-      </span>
-    </view>
-    <!-- publisher info end -->
+  <view class='notes'>
+    <view wx:for="{{notes}}" wx:key="{{index}}" class='note'>
+      <view class='note_puber'>
+        <span>
+          <image src='{{item.avatarUrl}}'></image>
+        </span>
+        <span>
+          <view>{{item.publisher}} · {{item.time}}</view>
+          <view class='topic'>{{item.topic}}</view>
+        </span>
+      </view>
+      <!-- publisher info end -->
 
-    <view class="content_con">
-      <view>{{item.content}}</view>
-      
-      <view class='img_con' wx:if="{{item.imgs.length > 1}}">
-        <view wx:for="{{item.imgs}}" wx:for-index="cindex" wx:key="{{cindex}}" class="temp">
-          <image src='{{item}}' data-index='{{index}}'
-            data-cindex='{{cindex}}' catchtap='previewImg'></image>
+      <view class="content_con">
+        <view>{{item.content}}</view>
+
+        <view class='img_con' wx:if="{{item.imgs.length > 1}}">
+          <view wx:for="{{item.imgs}}" wx:for-index="cindex" wx:key="{{cindex}}" class="temp">
+            <image src='{{item}}' data-index='{{index}}' data-cindex='{{cindex}}' catchtap='previewImg'></image>
+          </view>
+        </view>
+        <!-- wx:if   imgs.length > 1 end -->
+
+        <view wx:else class='single_img'>
+          <image src='{{item.imgs[0]}}' catchtap='previewImg'></image>
         </view>
       </view>
-      <!-- wx:if   imgs.length > 1 end -->
+      <!-- content end -->
 
-      <view wx:else class='single_img'>
-        <image src='{{item.imgs[0]}}' catchtap='previewImg'></image>
-      </view>
-    </view>
-    <!-- content end -->
-
-    <view class='note_bot'>
-      <view wx:for="{{note_bot}}" wx:key="{{index}}" class='bot_item'>
-        <span><image src='{{item.url}}'></image></span>
-        <span style="margin-right: 35rpx;">{{item.num}}</span>
+      <view class='note_bot'>
+        <view class='bot_item'>
+          <span>
+            <image src='./images/love.png'></image>
+          </span>
+          <span style="margin-right: 35rpx;">8721</span>
+        </view>
+        <view class='bot_item'>
+          <span>
+            <image src='./images/talk.png' catchtap='showTalks'></image>
+          </span>
+          <span style="margin-right: 35rpx;">8721</span>
+        </view>
+        <view class='bot_item'>
+          <button class='share_btn' open-type='share'>
+            <image src='./images/share.png'></image>
+          </button>
+        </view>
       </view>
     </view>
   </view>
   <!-- note card end -->
+
+  <view class='talks' hidden='{{!showTalks}}' catchtouchmove='true' style='background-color: rgba(0, 0, 0, .2);'>
+    <view class='talk' catchtouchmove='true'>
+      <view class='talk_h'>
+        <view class="talk_hl">全部评论</view>
+        <view class='talk_hr' catchtap='closeTalk'>
+          <icon type="cancel" size="20" />
+        </view>
+      </view>
+      <!-- 评论头部 -->
+      <scroll-view scroll-y style="height: 860rpx;">
+        <view class='talk_cell' wx:for="{{talks}}" wx:key="{{index}}">
+          <view class='avatar'>
+            <image src='{{item.avatarUrl}}'></image>
+          </view>
+          <view class='talk_cell_r'>
+            <view class='tcell_header'>
+              <view class='talker_name'>{{item.name}}</view>
+              <view class='talk_time'>{{item.time}}</view>
+            </view>
+            <view class='discuss'>{{item.discuss}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- 评论框 -->
+</view>
+
+<view class='{{publishBtnClass}} {{skin}} publish' catchtap='navToPublishNote'>
+  <text class='iconfont icon-pen'></text>
+  <text>发表</text>
 </view>

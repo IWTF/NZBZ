@@ -1,42 +1,49 @@
-@import "../../skins/light.wxss";
-page{
+@import "../../skins/dark.wxss";
+
+page {
   width: 100%;
-  height: 100%;
   font-size: 14px;
   color: #646a77;
+  position: relative;
 }
 
-.header{
+.bookGroup {
+  width: 100%;
+  height: 100%;
+}
+
+.header {
   padding: 20rpx 30rpx;
   color: #fff;
   background-color: #d1e7da;
 }
 
-.circle{
+.circle {
   font-size: 20px;
   font-weight: bold;
   padding: 10rpx 0 20rpx 0;
 }
 
-.one_word span{
+.one_word span {
   display: inline-block;
   vertical-align: middle;
 }
 
-.one_word image{
+.one_word image {
   width: 40rpx;
   height: 37rpx;
   margin-right: 24rpx;
 }
 
-.one_word image:hover{
-  /* 想加一个左右晃动小彩蛋 */
+/* .one_word image:hover{
   background-color: #000;
-}
+} */
 
 /*************** pub style *************/
-.pub{
+
+.pub {
   display: flex;
+  top: -2rpx;
   flex-direction: row;
   justify-content: space-around;
   padding: 22rpx 0 20rpx 0;
@@ -44,49 +51,56 @@ page{
   background-color: #fff;
   z-index: 1;
   position: sticky;
-  top: -2rpx;
 }
 
-.item span{
+.item span {
   display: inline-block;
   vertical-align: top;
 }
 
-.item image{
+.item image {
   width: 40rpx;
   height: 40rpx;
   margin-right: 15rpx;
 }
 
 /************ note style *************/
-.note{
-  padding: 30rpx 30rpx 10rpx;
-  background-color: #fff;
+
+.notes {
+  padding-bottom: 20rpx;
+  background-color: #f8f8f9;
 }
 
-.note_puber span{
+.note {
+  padding: 30rpx 30rpx 10rpx;
+  background-color: #fff;
+  margin: 20rpx 0;
+  box-shadow: 0 0 16rpx 2rpx rgba(26, 26, 26, 0.05);
+}
+
+.note_puber span {
   display: inline-block;
   vertical-align: middle;
 }
 
-.note_puber image{
+.note_puber image {
   width: 80rpx;
   height: 80rpx;
   border-radius: 50%;
   margin-right: 20rpx;
 }
 
-.topic{
+.topic {
   padding: 10rpx 0;
   font-weight: bold;
   color: #000;
 }
 
-.content_con, .note_bot{
+.content_con, .note_bot {
   padding: 0 10rpx;
 }
 
-.img_con{
+.img_con {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -94,46 +108,225 @@ page{
   padding: 15rpx 0 0;
 }
 
-.temp{
+.temp {
   width: 214rpx;
   margin: 4rpx;
 }
 
-.img_con image{
+.img_con image {
   width: 100%;
   height: 214rpx;
 }
 
-.single_img{
+.single_img {
   text-align: center;
 }
 
-.single_img image{
+.single_img image {
   width: 70%;
   height: 750rpx;
 }
 
 /************** note_bot style ***********/
-.note_bot{
+
+.note_bot {
   display: flex;
   flex-direction: row;
   font-size: 13px;
   font-weight: bold;
 }
 
-.bot_item span{
+.bot_item span {
   display: inline-block;
   vertical-align: middle;
 }
 
-.bot_item image{
-  width: 50rpx;
-  height: 50rpx;
+.bot_item image {
+  width: 40rpx;
+  height: 40rpx;
   margin-right: 15rpx;
 }
 
-.bot_item:last-child image{
-  width: 50rpx;
-  height: 60rpx;
+.bot_item:last-child image {
+  width: 40rpx;
+  height: 48rpx;
   nav-right: -6rpx;
+}
+
+.publish {
+  position: fixed;
+  width: 216rpx;
+  height: 64rpx;
+  /* bottom: 32rpx; */
+  left: calc(50% - 108rpx);
+  right: calc(50% - 108rpx);
+  text-align: center;
+  background-color: #519b7a;
+  font-size: 30rpx;
+  line-height: 2;
+  border-radius: 64rpx;
+  box-shadow: 0 0 4rpx 0rpx rgba(81, 122, 155, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+}
+
+.publish text {
+  padding: 0 4rpx;
+}
+
+.dark-box .publish {
+  box-shadow: none;
+}
+
+.publishBtnShow {
+  bottom: 32rpx;
+  opacity: 1;
+}
+
+.publishBtnHide {
+  bottom: -64rpx;
+  opacity: 0;
+}
+
+.share_btn {
+  border-radius: 0;
+  line-height: 1;
+  background-color: transparent;
+  color: #495060;
+  font-size: 14px;
+  padding: 0 0 10rpx 0;
+}
+
+.share_btn::after {
+  border: none;
+}
+
+.talks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.talk {
+  position: absolute;
+  bottom: -10rpx;
+  left: 0;
+  padding: 20rpx 30rpx;
+  background-color: #fff;
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  animation: upforward 0.5s linear;
+}
+
+@keyframes upforward {
+  0% {
+    bottom: -100%;
+  }
+
+  100% {
+    bottom: -10rpx;
+  }
+}
+
+.talk_h {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 20rpx;
+}
+
+.talk_hl {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.talk_hr {
+  position: relative;
+  flex-grow: 1;
+  text-align: right;
+  color: #cacbcc;
+}
+
+.talk_hr {
+  padding-right: 10rpx;
+}
+
+/* .talk_con{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+} */
+
+.talk_cell {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding-bottom: 80rpx;
+}
+
+.avatar, .avatar image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: rgba(71, 78, 88, 0.0195) 1px 1px,
+                rgba(75, 82, 92, 0.019) 2px 2px,
+                rgba(80, 86, 96, 0.0185) 3px 3px,
+                rgba(84, 90, 100, 0.018) 4px 4px,
+                rgba(88, 94, 103, 0.0175) 5px 5px,
+                rgba(92, 98, 107, 0.017) 6px 6px,
+                rgba(96, 102, 111, 0.0165) 7px 7px;
+}
+
+.talk_cell_r {
+  flex-grow: 1;
+}
+
+.tcell_header {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 5rpx;
+  border-bottom: 3rpx solid #dddee1;
+}
+
+.talker_name {
+  position: relative;
+  color: #61b0ff;
+}
+
+.talker_name::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+  bottom: -6rpx;
+  border: 3rpx solid #61b0ff;
+}
+
+.talk_time {
+  text-align: right;
+  flex-grow: 1;
+  color: #cacbcc;
+}
+
+.discuss {
+  padding: 5rpx 0 20rpx 0;
+}
+
+.detail>view {
+  box-shadow: 0 0 16rpx 2rpx rgba(26, 26, 26, 0.05);
+}
+
+::-webkit-scrollbar {
+  height: 0;
+  width: 0;
+  color: transparent;
 }

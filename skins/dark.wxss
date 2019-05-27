@@ -27,7 +27,7 @@
 
 /******* pub style ********/
 .dark-box.bookGroup .pub{
-  border: 2rpx solid #66707f !important;
+  border: 2rpx solid #14161a !important;
   background-color: #33373b !important;
 }
 
@@ -103,6 +103,9 @@
 /* .dark-box .footer{
   background-color: #33373b !important;
 } */
+.dark-box.detail .shareC{
+  color: #66707f !important;
+}
 
 .dark-box.detail .contact{
   color: #66707f !important;
@@ -214,7 +217,7 @@
   background-image: linear-gradient(to right, transparent 60%, #33373b) !important;
 }
 
-.dark-box.home .tag{
+/* .dark-box.home .tag{
   color: #e09c54 !important;
   background-color: #ebdbc9 !important;
 }
@@ -232,4 +235,4 @@
 .dark-box.home .tag-2{
   color: #e09c54 !important;
   background-color: #ebdbc9 !important;
-}
+} */

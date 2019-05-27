@@ -1,4 +1,4 @@
-<view class='{{skin}} home'>
+3<view class='{{skin}} home'>
   <view class='like_pre_con'>
       <scroll-view
         scroll-x="true"
@@ -23,15 +23,15 @@
 
   <!-- 卡片展示 -->
   <view class='page'>
-    <view class='card_con' wx:for="123456" wx:key="{{key}}" bindtap='navToDetail'>
+    <view class='card_con' wx:for="12345678" wx:key="{{key}}" bindtap='navToDetail'>
       <view class='img_con'>
-        <image src='../../images/exam.png'></image>
+        <image src='../../images/book_demo.jpg'></image>
       </view>
       <view class='word_con'>
-        <view class='card_date'>6月3日 · 2018年</view>
+        <text class='card_date'>6月3日 · 2018年</text>
         <view class='card_title'>原创悬疑微电影《2030》</view>
         <view class='tags_con'>
-          <span wx:for="{{tags}}" wx:key="{{key}}" class="tag-{{num}} tag">{{item}}</span>
+          <span wx:for="{{tags}}" wx:key="{{key}}" class="tag">{{item}}</span>
         </view>
       </view>
     </view>

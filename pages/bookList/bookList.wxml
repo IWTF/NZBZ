@@ -24,12 +24,24 @@
             {{item.disc}}
           </view>
         </view>
+        <!-- 卡片正面 -->
+
         <view class='back'
           style="{{front ? 'transform:rotateY(-180deg);':'transform:rotateY(-360deg);'}}">
           <view class="circle">
-            <view class='center'>**</view>
+            <view class='center'>
+              <view class='circle_disc'>书友</view>
+              <image wx:for="{{curFriends}}" wx:key="{{index}}"
+                class='friAvatar' src='{{item}}'
+                catchtap='clickImg'
+                style='position: absolute; left:{{positions[index].x-45}}rpx;top:{{positions[index].y-45}}rpx;'></image>
+            </view>
+          </view>
+          <view class='map_btn_con'>
+            <view class='map_btn' catchtap='navTomap'>进入书途</view>
           </view>
         </view>
+        <!-- 卡片反面 -->
       </swiper-item>
     </block>
   </swiper>

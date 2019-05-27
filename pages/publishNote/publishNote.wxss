@@ -1,0 +1,108 @@
+@import "../../skins/light.wxss";
+
+page {
+  background-color: whitesmoke;
+  font-size: 32rpx;
+  height: 100%;
+}
+
+.publishNote {
+  height: 100%;
+}
+
+.publishNote>view, .watcherPicker {
+  box-shadow: 0 0 16rpx 2rpx rgba(26, 26, 26, 0.05);
+  background-color: white;
+  padding: 24rpx;
+}
+
+.publishNote>view:not(:first-child) {
+  margin: 24rpx 0;
+}
+
+.photoList {
+  /* background-color: whitesmoke; */
+  min-height: 144rpx;
+  /* border: 1px solid #e2e2e2; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.dark-box .photoList {
+  /* border: 1rpx solid #14161a; */
+}
+
+.photoList .hint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+  height: 108rpx;
+  flex-direction: column;
+  flex: 0 0 25%;
+}
+
+.photoList .hint text:first-child {
+  font-size: 48rpx;
+}
+
+.photoList .hint text {
+  display: block;
+}
+
+.photoList image {
+  height: 144rpx;
+  flex: 0 0 25%;
+}
+
+.divider {
+  height: 4rpx;
+  position: relative;
+}
+
+.divider::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.dark-box .divider::before {
+  border-bottom: 1px solid #14161a;
+}
+
+.editor input {
+  height: 96rpx;
+  font-size: 36rpx;
+}
+
+.editor editor {
+  margin-top: 8rpx;
+}
+
+.watcherPicker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24rpx;
+}
+
+.watcherPicker text{
+  margin: 0 8rpx;
+}
+
+.publishBtn {
+  margin: 24rpx 32rpx;
+  /* background-color: whitesmoke; */
+}
+
+.dark-box .publishBtn{
+  background-color: #33373b !important;
+  color: #81848b !important;
+}

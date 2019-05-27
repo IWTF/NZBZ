@@ -1,0 +1,12 @@
+
+<view class='talk_cell' wx:if="{{talks.length > 0}}"
+  wx:for="{{talks}}" wx:key="{{index}}">
+  <view class='avatar'><image src='{{item.avatarUrl}}'></image></view>
+  <view class='talk_cell_r'>
+    <view class='tcell_header'>
+      <view class='talker_name'>{{item.name}}</view>
+      <view class='talk_time'>{{item.time}}</view>
+    </view>
+    <view class='discuss'>{{item.discuss}}</view>
+  </view>
+</view>

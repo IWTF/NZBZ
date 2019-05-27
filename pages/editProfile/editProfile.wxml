@@ -1,0 +1,37 @@
+<!--pages/editProfile/editProfile.wxml-->
+<view class='{{skin}} editProfile'>
+  <view class='info-group'>
+    <view class='info-item with-arrow'>头像</view>
+    <view class='info-item'>签名</view>
+  </view>
+
+  <view class='info-group'>
+    <view class='info-item'>
+      <text>昵称</text>
+      <text>仙人球</text>
+    </view>
+    <view class='info-item'>
+      <text>性别</text>
+      <text>男</text>
+    </view>
+    <view class='info-item with-arrow'>生日</view>
+  </view>
+
+  <view class='info-group'>
+    <view class='info-item'>
+      <text>职业</text>
+      <text>学生</text>
+    </view>
+    <view class='info-item with-arrow'>所在地</view>
+  </view>
+
+  <view class='info-group'>
+    <view class='info-item with-arrow'>个人说明</view>
+  </view>
+
+  <view class='info-group'>
+    <view class='info-item with-arrow'>资料展示设置</view>
+  </view>
+
+  <button type='primary' class='saveBtn'>保存</button>
+</view>

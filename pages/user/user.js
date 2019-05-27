@@ -6,6 +6,7 @@ var app = getApp()
 Page({
   data: {
     skin: '',
+    checked: false,
     user_info: {
       avatarUrl: './images/avatar.png',
       sex: 'm',
@@ -19,6 +20,12 @@ Page({
       disc: '科技控， 程序员， 喜欢热血图书'
     }
   },
+  onLoad () {
+    if (app.globalData.skin == 'dark-box') {
+      this.setData({ checked : true })
+    }
+  },
+
   onShow: function () {
     var skin = app.globalData.skin
     this.setData({
@@ -69,5 +76,24 @@ Page({
     app.globalData.skin = skin
 
     changeSkin.changeSkin(skin)
+  },
+
+  /**
+   * 跳转个人信息编辑页
+   */
+
+  navtoEditProfile:()=>{
+    wx.navigateTo({
+      url: '../editProfile/editProfile',
+    })
+  },
+
+  /**
+   * 跳转到快递查询页
+   */
+  navtoExpress:()=>{
+    wx.navigateTo({
+      url: '../express/express',
+    })
   }
 })

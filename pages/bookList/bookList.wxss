@@ -45,7 +45,7 @@ page{
 
 .arrow image{
   height: 50rpx;
-  width: 60rpx;
+  width: 50rpx;
 }
 
 
@@ -58,7 +58,7 @@ page{
 .book_top, .circle{
   border-top-left-radius: 15rpx;
   border-top-right-radius: 15rpx;
-  padding: 40rpx 0 25rpx;
+  padding: 30rpx 0 25rpx;
   text-align: center;
   background-color: #62adbc;
 }
@@ -83,10 +83,10 @@ page{
   border-radius: 50%;
 }
 
-.bookDisc{
+.bookDisc,.map_btn_con{
   height: 360rpx;
   text-align: center;
-  padding: 50rpx 25rpx 20rpx;
+  padding: 50rpx 25rpx 10rpx;
   background-color: #fff;
   border-bottom-left-radius: 15rpx;
   border-bottom-right-radius: 15rpx;
@@ -103,7 +103,7 @@ page{
   left: 0;
   width: 520rpx;
   height: 100%;
-  padding: 80rpx 120rpx;
+  padding: 60rpx 120rpx;
   border-radius: 15rpx;
   background-color: #f8f8f9;
   perspective:10000;
@@ -118,9 +118,37 @@ page{
 .center{
   position: relative;
   display: inline-block;
-  width: 10rpx;
-  height: 10rpx;
+  width: 1rpx;
+  height: 1rpx;
   margin: auto;
   margin-top: 38%;
-  background-color: #fff;
+}
+
+.circle_disc{
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  font-size: 20rpx;
+  font-weight: bold;
+  color: #fff;
+}
+
+.friAvatar{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  border: 4rpx solid #d1e7da;
+}
+
+.map_btn_con{
+  height: 140rpx;
+}
+
+.map_btn{
+  width: 160rpx;
+  margin: auto;
+  padding: 15rpx 25rpx;
+  border-radius: 40rpx;
+  border: 6rpx solid #b5dac5;
 }

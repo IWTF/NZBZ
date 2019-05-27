@@ -1,0 +1,28 @@
+<view>
+  <view class='tem_card'>
+    <view class='hoster_head'><image src='./images/test.png'></image></view>
+    <view class='hoster_content'>
+      <form bindsubmit="share">
+        <textarea class='content' name="content"
+          placeholder-style="color:#000;font-size: 17px;"
+          placeholder="如果我们有勇气去追求，所有的梦想都可以实现。"/>
+        <input class='title' name="title"
+          placeholder-style='direction: rtl;font-size: 17px;'
+          placeholder='《哈利波特》'></input>
+        <view class='footer'>
+          <button form-type="submit"
+            style='border-right: 4rpx solid #befce0;'>
+            <image src='./images/hoster.png'></image>  
+            生成海报
+          </button>
+          <button>
+            <image src='./images/moudle.png'></image>  
+            更换模板
+          </button>
+        </view>
+      </form>
+    </view>
+  </view>
+
+  <canvas-share bindclose="close" visible="{{visible}}" item="{{item}}"/>
+</view>

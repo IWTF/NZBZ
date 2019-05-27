@@ -13,7 +13,7 @@
         <span class="girl" wx:else>♀</span>
         <span class="age">{{user_info.age}}岁</span>
       </view>
-      <view class='edit'><view>编辑</view></view>
+      <view class='edit' catchtap='navtoEditProfile'><view>编辑</view></view>
     </view>
     <!-- avatar,sex... base_info end -->
 
@@ -56,7 +56,7 @@
 
   <view class='settings'>
     <view class='setting_header'>更多设置</view>
-    <view>
+    <view catchtap='navtoExpress'>
       <view class='setting send'>
         <span class="setting_icon"><image src='./images/mail.png'></image></span>
         <span>快递查询</span>
@@ -66,7 +66,7 @@
       <view class='setting'>
         <span class="setting_icon"><image src='./images/theme.png'></image></span>
         <span>夜间主题</span>
-        <switch bindchange="switchChange" class='switch'/>
+        <switch bindchange="switchChange" class='switch' checked='{{checked}}'/>
       </view>
     </view>
   </view>

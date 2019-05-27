@@ -1,11 +1,17 @@
 {
   "pages": [
+    "pages/createHoster/createHoster",
     "pages/home/home",
+    "pages/detail/detail",
+    "pages/bookGroup/bookGroup",
     "pages/bookList/bookList",
     "pages/collect/collect",
     "pages/user/user",
-    "pages/bookGroup/bookGroup",
-    "pages/detail/detail"
+    "pages/bookMap/bookMap",
+    "pages/publishNote/publishNote",
+    "pages/launch/launch",
+    "pages/editProfile/editProfile",
+    "pages/express/express"
   ],
   "window": {
     "backgroundTextStyle": "light",

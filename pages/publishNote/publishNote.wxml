@@ -1,0 +1,30 @@
+<!--pages/publishNote/publishNote.wxml-->
+<view class='{{skin}} publishNote'>
+  <view class='editor'>
+    <view class='photoList'>
+      <image wx:for="{{images}}" wx:key="{{index}}" src="{{item}}"></image>
+      <view class='hint' catchtap='addImage'>
+        <text class='iconfont icon-add'></text>
+        <text wx:if="{{!images}}">添加图片</text>
+      </view>
+    </view>
+    <input placeholder="标题"></input>
+    <view class='divider'></view>
+    <editor placeholder="正文..."></editor>
+  </view>
+
+  <picker mode="selector" range="{{watcherArray}}" value="{{watcherIndex}}" bindchange="pickWatcher">
+    <view class='watcherPicker'>
+      <view>
+        <text class='iconfont icon-eye'></text>
+        <text>谁可以看</text>
+      </view>
+      <view>
+        <text class='pickerValue'>{{watcherArray[watcherIndex]}}</text>
+        <text class='iconfont icon-right-arrow'></text>
+      </view>
+    </view>
+  </picker>
+
+  <button type='primary' class='publishBtn'>发布</button>
+</view>

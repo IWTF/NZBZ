@@ -4,17 +4,18 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.2",
 	"appid": "wx986f698bf0a87c1f",
-	"projectname": "MyWxchatProject",
+	"projectname": "WMPC",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

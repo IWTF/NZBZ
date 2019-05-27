@@ -64,7 +64,7 @@
       <view class="talk_hl">评论</view>
       <view class='talk_hr'>友圈</view>
     </view>
-    <view wx:for="{{talks}}" class='talk_cell' wx:key="{{index}}">
+    <!-- <view wx:for="{{talks}}" class='talk_cell' wx:key="{{index}}">
       <view class='avatar'><image src='{{item.avatarUrl}}'></image></view>
       <view class='talk_cell_r'>
         <view class='tcell_header'>
@@ -73,7 +73,8 @@
         </view>
         <view class='discuss'>{{item.discuss}}</view>
       </view>
-    </view>
+    </view> -->
+    <talkCard talks="{{talks}}"></talkCard>
   </view>
   <!-- talk end -->
 
@@ -83,10 +84,12 @@
       <view>收藏</view>
     </view>
     <view class='save'>
-      <view><image src='./images/share.png'></image></view>
-      <view>分享</view>
+      <button class='save_btn' open-type='share'>
+        <view><image src='./images/share.png'></image></view>
+      </button>
+      <view class='shareC'>分享</view>
     </view>
-    <view class='contact'>
+    <view class='contact' catchtap='copy'>
       <span>联系TA</span>
     </view>
   </view>

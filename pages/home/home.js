@@ -36,9 +36,6 @@ Page({
       "八点半",
       "微电影"
     ],
-    num: function() {
-      return Math.floor(Math.random() * 10 + 1) % 3;
-    },
     topBarH: 135   // 顶部标签的高度
   },
   onShow: function (options) {
@@ -60,7 +57,7 @@ Page({
   onPageScroll (res) {
     // console.log('onPageScroll :', res)
     var top = res.scrollTop
-    if (top <= 55) {
+    if (top <= 60) {
       this.setData({ topBarH: 135 - top })
     }
   }

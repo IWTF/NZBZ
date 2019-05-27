@@ -5,8 +5,10 @@ var app = getApp()
 Page({
   data: {
     skin: '',
-    notes: [
-      {
+    showTalks: false,
+    currentScrollTop: 0,
+    publishBtnClass: 'publishBtnShow', // 发表按钮的显示样式类
+    notes: [{
         avatarUrl: './images/avatar.png',
         publisher: '仙人球',
         time: '八月31',
@@ -40,26 +42,50 @@ Page({
         ]
       }
     ],
-    note_bot: [
-      {
-        url: './images/love.png',
-        num: 8721
+    talks: [{
+        avatarUrl: './images/avatar.png',
+        name: '仙人球',
+        time: '2019-4-12',
+        discuss: '从小被寄养在姨丈家里的哈利波特，饱受姨丈一家人的歧视与欺侮.'
       },
       {
-        url: './images/talk.png',
-        num: 8721
+        avatarUrl: './images/avatar.png',
+        name: '仙人球',
+        time: '2019-4-12',
+        discuss: '从小被寄养在姨丈家里的哈利波特，饱受姨丈一家人的歧视与欺侮，然而就在11岁生日那天，哈利波特得知了自己原本是巫师，并且被录取为霍格沃茨魔法学校中的一员。'
       },
       {
-        url: './images/share.png'
+        avatarUrl: './images/avatar.png',
+        name: '仙人球',
+        time: '2019-4-12',
+        discuss: '从小被寄养在姨丈家里的哈利波特.'
+      },
+      {
+        avatarUrl: './images/avatar.png',
+        name: '仙人球',
+        time: '2019-4-12',
+        discuss: '从小被寄养在姨丈家里的哈利波特，饱受姨丈一家人的歧视与欺侮.'
+      },
+      {
+        avatarUrl: './images/avatar.png',
+        name: '仙人球',
+        time: '2019-4-12',
+        discuss: '从小被寄养在姨丈家里的哈利波特，饱受姨丈一家人的歧视与欺侮，然而就在11岁生日那天，哈利波特得知了自己原本是巫师，并且被录取为霍格沃茨魔法学校中的一员。'
+      },
+      {
+        avatarUrl: './images/avatar.png',
+        name: '仙人球',
+        time: '2019-4-12',
+        discuss: '从小被寄养在姨丈家里的哈利波特.'
       }
     ]
   },
 
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
-  onShow: function (options) {
+  onShow: function(options) {
     var skin = app.globalData.skin
     this.setData({
       skin: app.globalData.skin
@@ -68,7 +94,7 @@ Page({
     changeSkin.changeSkin(skin)
   },
 
-  previewImg (e) {
+  previewImg(e) {
     var index = e.currentTarget.dataset.index
     var cindex = e.currentTarget.dataset.cindex
     // 只能显示http链接
@@ -84,5 +110,65 @@ Page({
       // current: arr[cindex],
       urls: arr
     })
+  },
+
+  navToPublishNote: () => {
+    wx.navigateTo({
+      url: '../publishNote/publishNote',
+    })
+  },
+
+  showTalks() {
+    // 通过后端接口获取数据
+    var talks = [
+      '发的说法积分卡大家来看看尽快发',
+      '发的说法积分卡大家来看看尽快发',
+      '发的说法积分卡大家来看看尽快发',
+      '发的说法积分卡大家来看看尽快发',
+      '发的说法积分卡大家来看看尽快发'
+    ]
+
+    this.setData({
+      showTalks: true
+    })
+    console.log('click talk button')
+  },
+
+  closeTalk() {
+    this.setData({
+      showTalks: false
+    })
+  },
+
+  // 页面跳转函数
+  navTolaunch() {
+    wx.navigateTo({
+      url: '../launch/launch'
+    })
+  },
+
+  navTohoster() {
+    wx.navigateTo({
+      url: '../createHoster/createHoster'
+    })
+  },
+
+  /**
+   * 监听页面滑动
+   */
+  onPageScroll(res) {
+    // console.log('onPageScroll :', res.scrollTop, this.data.currentScrollTop)
+    var top = res.scrollTop
+    if (top >= this.data.currentScrollTop + 5) {
+      this.setData({
+        publishBtnClass: 'publishBtnHide',
+        currentScrollTop: top
+      })
+    } else if (top <= this.data.currentScrollTop - 5) {
+      this.setData({
+        publishBtnClass: 'publishBtnShow',
+        currentScrollTop: top
+      })
+    }
   }
 })

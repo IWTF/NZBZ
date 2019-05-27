@@ -1,0 +1,45 @@
+<view>
+  <view class='timezone'>
+    <view wx:for="{{friends}}" wx:key='{{index}}'
+      class='timedot {{currentItemId == index ? "cur_dot":""}}'></view>
+  </view>
+  <!-- 时间轴 -->
+
+  <view class='tab_con'>
+    <view class='book_img'><image src='./images/test.png'></image></view>
+    <view class='book_disc'>
+      <view class='book_title'>人生苦旅</view>
+      <view>分享者：上善若水</view>
+      <view>获取时间：2018年2月11日</view>
+    </view>
+  </view>
+
+  <view class='tag_con'>
+    <view class='tag_img'><image src='./images/route.png'></image></view>
+    <view class='tag_title'>书途</view>
+  </view>
+
+  <swiper
+    class='swiper'
+    vertical='true'
+    current='{{currentItemId}}'
+    bindchange='changeCard'
+    style='width: {{screenW}}px;height: {{screenH}}rpx;'>
+    <block wx:for="{{friends}}" wx:key="{{index}}">
+      <swiper-item class="map_con" catchtap='changePage' data-index='{{index}}'>
+        <view>
+          <view class='map_img'><image src='./images/test.png'></image></view>
+          <!-- 卡片上部照片 -->
+
+          <view class='map_disc'>
+            <view class='share_btn'>
+              <image src='./images/share.png' style='z-index: 1;'></image>
+            </view>
+            <view class='card_name'>读者的名字</view>
+            <view>读者分享的一些东西读者分享的一些东西读者分享的一些东西读者分享的一些东西读者分享的一些东西</view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>

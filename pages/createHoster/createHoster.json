@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "canvas-share": "../../components/hoster/index"
+  }
+}

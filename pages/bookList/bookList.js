@@ -45,6 +45,7 @@ Page({
         ]
       }
     ],
+    curFriends: [],
     positions: []
   },
 
@@ -54,6 +55,7 @@ Page({
     } else {
       this.setData({ currentItemId: this.data.books.length - 1 })
     }
+    this.setData({ front:true })
   },
 
   switchR () {
@@ -62,26 +64,62 @@ Page({
     } else {
       this.setData({ currentItemId: 0 })
     }
+    this.setData({ front: true })
   },
 
   changePage (e) {
-    const r = 40
+    const r = 140
     var index = e.currentTarget.dataset.index
     var item = this.data.books[index]
     
     this.setData({ front: !this.data.front})
     if (!this.data.front) {
-      var si = Math.sin(2 * Math.PI / item.friends.length)
-      console.log('角度为： ', si)
 
-      var positions = {x:0,y:0}
-      console.log(positions)
-      for(var i=0; i<item.friends.length; i++) {
-        positions.x = i*si
-        positions.y = Math.sqrt(r*r - (i*si)*(i*si))
-        this.data.positions.push(positions)
+      var positions = []
+      var len = item.friends.length
+      for(var i=0; i<len; i++) {
+        var position = { x: 0, y: 0 }
+        // 计算角度
+        var sin = Math.sin((2 * Math.PI / item.friends.length) * i)
+
+        // 计算x方向偏移量  x = sin * r
+        var x = sin*r
+        position.x = x
+
+        if (i <= (len / 2)) {
+          if (i <= (len / 4)) {
+            position.y = Math.sqrt(r * r - x*x)
+          } else {
+            position.y = -(Math.sqrt(r * r - x*x))
+          }
+        } else {
+          if (i <= (len / 4 * 3)) {
+            position.y = -(Math.sqrt(r * r - x * x))
+          } else {
+            position.y = Math.sqrt(r * r - x * x)
+          }
+        }
+        console.log('cur position: ', position)
+        positions.splice(i, 0, position)
       }
+      this.setData({
+        positions: positions,
+        curFriends: item.friends
+      })
       console.log('positions: ', this.data.positions)
     }
+  },
+
+  clickImg () {
+    console.log('fadsfadsfadsfa')
+  },
+
+  navTomap() {
+    wx.navigateTo({
+      url: '../bookMap/bookMap',
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
   }
 })
